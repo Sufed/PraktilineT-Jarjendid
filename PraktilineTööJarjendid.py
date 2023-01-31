@@ -1,6 +1,8 @@
-#Harjutus 3. Бесполезные числа.
+from random import *
+#Harjutus 3. Бесполезные числа. (1)
 print("Harjutus 3. Бесполезные числа")
-numbers=[1, 2, 3, 4, 5]
+numbers=input("Введи числа через пробел: ").split()
+#numbers=[1, 2, 3, 4, 5]
 Большие=max(numbers) #Функция max() находить максимальное число.
 Бесполезные=Большие/len(numbers) #Большое число делим на кол-во символов.
 for i in range(len(numbers)): 
@@ -10,6 +12,25 @@ print(numbers)
 print()
 print()
 print()
+
+
+
+
+#Harjutus 3. Бесполезные числа. (2)
+print("Harjutus 3. Бесполезные числа")
+arvud=[]
+kogus=int(input("Kogus: "))
+for i in range(kogus):
+    arvud.append(randint(-100,100))
+print(arvud)
+max_arv=max(arvud)
+ind=arvud.index(max_arv)
+print(ind)
+print(max_arv)
+max_arv=max_arv/kogus
+arvud.insert(ind,max_arv)
+arvud.pop(ind+1)
+print(arvud)
 
 
 
